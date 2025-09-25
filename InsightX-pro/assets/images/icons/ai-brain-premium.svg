@@ -1,0 +1,61 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af"/>
+      <stop offset="50%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#34d399"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="40" cy="40" r="35" fill="url(#brainGradient)" filter="url(#glow)"/>
+  
+  <!-- Brain Shape -->
+  <path d="M25 30 C25 20, 35 15, 40 20 C45 15, 55 20, 55 30 C55 40, 50 50, 40 55 C30 50, 25 40, 25 30 Z" fill="white" opacity="0.95"/>
+  
+  <!-- Neural Network Lines -->
+  <path d="M30 25 L35 30 L40 25 L45 30 L50 25" stroke="url(#neuralGradient)" stroke-width="2" fill="none" opacity="0.8"/>
+  <path d="M30 35 L35 40 L40 35 L45 40 L50 35" stroke="url(#neuralGradient)" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M30 45 L35 50 L40 45 L45 50 L50 45" stroke="url(#neuralGradient)" stroke-width="2" fill="none" opacity="0.4"/>
+  
+  <!-- Neural Nodes -->
+  <circle cx="30" cy="25" r="2" fill="#10b981"/>
+  <circle cx="35" cy="30" r="2" fill="#10b981"/>
+  <circle cx="40" cy="25" r="2" fill="#10b981"/>
+  <circle cx="45" cy="30" r="2" fill="#10b981"/>
+  <circle cx="50" cy="25" r="2" fill="#10b981"/>
+  
+  <circle cx="30" cy="35" r="1.5" fill="#34d399"/>
+  <circle cx="35" cy="40" r="1.5" fill="#34d399"/>
+  <circle cx="40" cy="35" r="1.5" fill="#34d399"/>
+  <circle cx="45" cy="40" r="1.5" fill="#34d399"/>
+  <circle cx="50" cy="35" r="1.5" fill="#34d399"/>
+  
+  <!-- AI Circuit Pattern -->
+  <rect x="32" y="42" width="16" height="2" rx="1" fill="#1e40af" opacity="0.7"/>
+  <rect x="34" y="45" width="12" height="1" rx="0.5" fill="#1e40af" opacity="0.5"/>
+  <rect x="36" y="47" width="8" height="1" rx="0.5" fill="#1e40af" opacity="0.3"/>
+  
+  <!-- Data Flow Arrows -->
+  <path d="M20 20 L25 25" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M60 20 L55 25" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M20 60 L25 55" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M60 60 L55 55" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10b981"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight X - Advanced AI-Powered Trading Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- GSAP for scroll animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- SKIP LINK FOR ACCESSIBILITY -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-container">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    Insight X
+                </a>
+                <nav class="nav" id="siteNav">
+                    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-links">
+                        <li><a href="#features" class="nav-link">Features</a></li>
+                        <li><a href="#education" class="nav-link">Education</a></li>
+                        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                    </ul>
+                    <button class="header-cta" onclick="openSignupForm()">Start Free Trial</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <script>
+      // Mobile nav toggle for index page
+      document.addEventListener('DOMContentLoaded', () => {
+        const nav = document.getElementById('siteNav');
+        const toggle = nav ? nav.querySelector('.nav-toggle') : null;
+        if (toggle && nav) {
+          toggle.addEventListener('click', () => {
+            const expanded = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', String(!expanded));
+            nav.classList.toggle('open');
+          });
+        }
+      });
+    </script>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero" id="main-content">
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-headline">
+                        <span class="headline-reveal">
+                            Smart Trading with 
+                            <span class="hero-highlight">Advanced AI Technology</span>
+                        </span>
+                        <svg class="headline-wave" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true">
+                            <path id="headline-wave-path" d="M0,20 C100,0 200,40 300,20 C400,0 500,40 600,20" fill="none" stroke="var(--primary-blue)" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Join 28,000+ traders using our intelligent platform to make informed decisions, 
+                        manage risks effectively, and grow their portfolios with confidence.
+                    </p>
+                    
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">28K+</span>
+                            <span class="hero-stat-label">Active Traders</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">$2.4M+</span>
+                            <span class="hero-stat-label">Total Invested</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">67%</span>
+                            <span class="hero-stat-label">Success Rate</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-cta-group">
+                        <button class="btn-primary" onclick="openSignupForm()">
+                            <i class="fas fa-rocket"></i>
+                            Start Free Trial
+                        </button>
+                        <button class="btn-secondary" onclick="openContactForm()">
+                            <i class="fas fa-calendar"></i>
+                            Schedule Demo
+                        </button>
+                    </div>
+                    
+                    <p class="hero-disclaimer">
+                        * Trading involves risk. Past performance doesn't guarantee future results. 
+                        All data based on 12-month average performance.
+                    </p>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="video-container">
+                        <video id="heroVideo" width="100%" height="300" controls muted autoplay loop>
+                            <source src="./assets/videos/video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay" onclick="toggleVideo()">
+                            <div class="video-play-button" id="playButton">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="video-title">See Insight X in Action</div>
+                            <div class="video-description">
+                                See how Insight X's AI analyzes markets and generates profitable trading signals
+                            </div>
+                        </div>
+                        
+                        <div class="mini-dashboard">
+                            <div class="dashboard-row">
+                                <span class="dashboard-label">AI Insights:</span>
+                                <span class="dashboard-value">1,247 signals</span>
+                            </div>
+                            <div class="dashboard-row">
+                                <span class="dashboard-label">Success Rate:</span>
+                                <span class="dashboard-value positive">87.3%</span>
+                            </div>
+                            <div class="dashboard-row">
+                                <span class="dashboard-label">Market Analysis:</span>
+                                <span class="dashboard-value realtime">Real-time</span>
+                            </div>
+                            <div class="dashboard-row">
+                                <span class="dashboard-label">Trend:</span>
+                                <span class="dashboard-value positive">Bulish</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST LOGOS -->
+    <section class="trusted-by-section trust-section">
+        <div class="container">
+            <p class="trust-title">Trusted by the leaders</p>
+            <div class="trust-logos">
+                <div class="trust-logos-container">
+                    <!-- First set of logos (AI-curated authorities and platform partners) -->
+                    <div class="trust-logo">
+                        <img src="./assets/images/logos/nasdaq.svg" alt="Nasdaq" class="trust-logo-img" loading="lazy">
+                    </div>
+                    <div class="trust-logo">
+                        <img src="./assets/images/logos/bloomberg.svg" alt="Bloomberg" class="trust-logo-img" loading="lazy">
+                    </div>
+                    <div class="trust-logo">
+                        <img src="./assets/images/logos/cmegroup.svg" alt="CME Group" class="trust-logo-img" loading="lazy">
+                    </div>
+                    <div class="trust-logo">
+                        <img src="./assets/images/logos/blackrock.svg" alt="BlackRock" class="trust-logo-img" loading="lazy">
+                    </div>
+                    <div class="trust-logo">
+                        <img src="./assets/images/logos/goldmansachs.svg" alt="Goldman Sachs" class="trust-logo-img" loading="lazy">
+                    </div>
+                    <div class="trust-logo">
+                        <img src="./assets/images/logos/hsbc.svg" alt="HSBC" class="trust-logo-img" loading="lazy">
+                    </div>
+                    <div class="trust-logo">
+                        <img src="./assets/images/logos/fidelity.svg" alt="Fidelity" class="trust-logo-img" loading="lazy">
+                    </div>
+                    <div class="trust-logo">
+                        <img src="./assets/images/logos/morningstar.svg" alt="Morningstar" class="trust-logo-img" loading="lazy">
+                    </div>
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="trust-logo">
+                        <img src="./assets/images/logos/nasdaq.svg" alt="Nasdaq" class="trust-logo-img" loading="lazy">
+                    </div>
+                    <div class="trust-logo">
+                        <img src="./assets/images/logos/bloomberg.svg" alt="Bloomberg" class="trust-logo-img" loading="lazy">
+                    </div>
+                    <div class="trust-logo">
+                        <img src="./assets/images/logos/cmegroup.svg" alt="CME Group" class="trust-logo-img" loading="lazy">
+                    </div>
+                    <div class="trust-logo">
+                        <img src="./assets/images/logos/blackrock.svg" alt="BlackRock" class="trust-logo-img" loading="lazy">
+                    </div>
+                    <div class="trust-logo">
+                        <img src="./assets/images/logos/goldmansachs.svg" alt="Goldman Sachs" class="trust-logo-img" loading="lazy">
+                    </div>
+                    <div class="trust-logo">
+                        <img src="./assets/images/logos/hsbc.svg" alt="HSBC" class="trust-logo-img" loading="lazy">
+                    </div>
+                    <div class="trust-logo">
+                        <img src="./assets/images/logos/fidelity.svg" alt="Fidelity" class="trust-logo-img" loading="lazy">
+                    </div>
+                    <div class="trust-logo">
+                        <img src="./assets/images/logos/morningstar.svg" alt="Morningstar" class="trust-logo-img" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Core Features</span>
+                <h2 class="section-title">Why Choose Insight X?</h2>
+                <p class="section-subtitle">
+                    Advanced technology combined with professional-grade tools to help you trade smarter, 
+                    not harder. Every feature is designed with your success in mind.
+                </p>
+            </div>
+            
+            <div class="features-howitworks">
+                <div class="features-left">
+                    <div class="pill-tag">Core Features</div>
+                    <h3 class="how-title">AI‑powered edge. Real results.</h3>
+                    <p class="how-subtitle">
+                        Connect securely, see live signals, and let adaptive models optimize your next move.
+                    </p>
+                    <ul class="how-bullets">
+                        <li>Bank‑grade security & private integrations</li>
+                        <li>Live analytics, alerts & clear trends</li>
+                        <li>Adaptive AI that learns and improves</li>
+                    </ul>
+                </div>
+                <div class="features-right">
+                    <!-- Card 1 -->
+                    <article class="how-card" id="how-card-1">
+                        <div class="how-card-header">
+                            <div class="how-icon-circle" aria-hidden="true"><i class="fas fa-bolt"></i></div>
+                            <div class="how-card-title">AI Signal Engine</div>
+                        </div>
+                        <p class="how-card-desc">Our models scan markets in real time to surface high‑conviction, risk‑adjusted trade signals—before the move.</p>
+                        <div class="how-graphic">
+                            <!-- Minimal UI mockup: signal list card (static) -->
+                            <svg viewBox="0 0 420 260" preserveAspectRatio="xMidYMid meet" aria-label="Minimal signal UI" style="width:100%;height:auto;max-width:640px">
+                                <rect x="10" y="10" width="400" height="240" rx="16" fill="var(--white)" stroke="var(--neutral-200)"/>
+                                <rect x="26" y="28" width="140" height="10" rx="5" fill="var(--neutral-200)"/>
+                                <rect x="26" y="52" width="368" height="44" rx="10" fill="var(--secondary-blue)"/>
+                                <circle cx="54" cy="74" r="8" fill="var(--accent-green)"/>
+                                <rect x="74" y="64" width="210" height="8" rx="4" fill="var(--white)" opacity="0.9"/>
+                                <rect x="74" y="80" width="150" height="8" rx="4" fill="var(--white)" opacity="0.8"/>
+                                <rect x="26" y="106" width="368" height="44" rx="10" fill="var(--neutral-100)"/>
+                                <circle cx="54" cy="128" r="8" fill="var(--primary-blue)"/>
+                                <rect x="74" y="118" width="210" height="8" rx="4" fill="var(--neutral-300)"/>
+                                <rect x="74" y="134" width="150" height="8" rx="4" fill="var(--neutral-200)"/>
+                                <rect x="26" y="160" width="368" height="44" rx="10" fill="var(--neutral-100)"/>
+                                <circle cx="54" cy="182" r="8" fill="var(--primary-blue)"/>
+                                <rect x="74" y="172" width="190" height="8" rx="4" fill="var(--neutral-300)"/>
+                                <rect x="74" y="188" width="130" height="8" rx="4" fill="var(--neutral-200)"/>
+                            </svg>
+                        </div>
+                        <div class="how-step">01</div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="how-card" id="how-card-2">
+                        <div class="how-card-header">
+                            <div class="how-icon-circle" aria-hidden="true"><i class="fas fa-shield-halved"></i></div>
+                            <div class="how-card-title">Real‑Time Risk Guard</div>
+                        </div>
+                        <p class="how-card-desc">Position‑level risk, drawdown projections, and dynamic stop guidance—updated tick by tick so you stay protected.</p>
+                        <div class="how-graphic">
+                            <!-- Minimal risk dashboard (static) -->
+                            <svg viewBox="0 0 420 260" preserveAspectRatio="xMidYMid meet" aria-label="Minimal risk dashboard" style="width:100%;height:auto;max-width:640px">
+                                <rect x="10" y="10" width="400" height="240" rx="16" fill="var(--white)" stroke="var(--neutral-200)"/>
+                                <rect x="26" y="26" width="100" height="10" rx="5" fill="var(--neutral-200)"/>
+                                <!-- Risk bands -->
+                                <rect x="26" y="56" width="368" height="24" rx="8" fill="rgba(239,68,68,0.10)"/>
+                                <rect x="26" y="88" width="368" height="24" rx="8" fill="rgba(251,191,36,0.10)"/>
+                                <rect x="26" y="120" width="368" height="24" rx="8" fill="rgba(16,185,129,0.12)"/>
+                                <!-- Gauge chips -->
+                                <rect x="26" y="162" width="110" height="28" rx="8" fill="var(--secondary-blue)"/>
+                                <rect x="146" y="162" width="110" height="28" rx="8" fill="var(--neutral-100)"/>
+                                <rect x="266" y="162" width="128" height="28" rx="8" fill="var(--neutral-100)"/>
+                                <circle cx="46" cy="176" r="6" fill="var(--accent-green)"/>
+                                <rect x="62" y="170" width="60" height="8" rx="4" fill="var(--white)" opacity="0.9"/>
+                            </svg>
+                        </div>
+                        <div class="how-step">02</div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="how-card" id="how-card-3">
+                        <div class="how-card-header">
+                            <div class="how-icon-circle" aria-hidden="true"><i class="fas fa-chart-pie"></i></div>
+                            <div class="how-card-title">Portfolio Intelligence</div>
+                        </div>
+                        <p class="how-card-desc">See correlations, concentration, and performance drivers. Rebalance with data‑backed suggestions to grow consistently.</p>
+                        <div class="how-graphic">
+                            <!-- Minimal portfolio intelligence (static) -->
+                            <svg viewBox="0 0 420 260" preserveAspectRatio="xMidYMid meet" aria-label="Minimal portfolio intelligence" style="width:100%;height:auto;max-width:640px">
+                                <rect x="10" y="10" width="400" height="240" rx="16" fill="var(--white)" stroke="var(--neutral-200)"/>
+                                <rect x="26" y="26" width="150" height="10" rx="5" fill="var(--neutral-200)"/>
+                                <!-- Pie chart -->
+                                <circle cx="110" cy="140" r="56" fill="var(--neutral-100)"/>
+                                <path d="M110,84 A56,56 0 0 1 166,140 L110,140 Z" fill="var(--primary-blue)"/>
+                                <path d="M110,140 L166,140 A56,56 0 0 1 110,196 Z" fill="var(--accent-green)"/>
+                                <path d="M110,140 L110,84 A56,56 0 0 1 88,94 Z" fill="var(--secondary-blue)"/>
+                                <!-- Legend -->
+                                <rect x="210" y="100" width="16" height="16" rx="4" fill="var(--primary-blue)"/>
+                                <rect x="210" y="128" width="16" height="16" rx="4" fill="var(--accent-green)"/>
+                                <rect x="210" y="156" width="16" height="16" rx="4" fill="var(--secondary-blue)"/>
+                                <rect x="236" y="100" width="136" height="10" rx="5" fill="var(--neutral-200)"/>
+                                <rect x="236" y="128" width="120" height="10" rx="5" fill="var(--neutral-200)"/>
+                                <rect x="236" y="156" width="100" height="10" rx="5" fill="var(--neutral-200)"/>
+                            </svg>
+                        </div>
+                        <div class="how-step">03</div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <h2 class="section-title" style="color: white;">Proven Results That Speak for Themselves</h2>
+                <p style="color: rgba(255,255,255,0.9);">Real performance metrics from our active user base</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card scroll-animate">
+                    <div class="stat-number">28,457</div>
+                    <div class="stat-label">Active Traders</div>
+                    <div class="stat-description">Growing community of professional and retail traders</div>
+                </div>
+                
+                <div class="stat-card scroll-animate">
+                    <div class="stat-number">$2.4B</div>
+                    <div class="stat-label">Total Trading Volume</div>
+                    <div class="stat-description">Cumulative trading volume processed on our platform</div>
+                </div>
+                
+                <div class="stat-card scroll-animate">
+                    <div class="stat-number">67%</div>
+                    <div class="stat-label">Average Success Rate</div>
+                    <div class="stat-description">12-month average success rate across all users</div>
+                </div>
+                
+                <div class="stat-card scroll-animate">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Available</div>
+                    <div class="stat-description">Round-the-clock customer support and assistance</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATIONAL HUB -->
+    <section class="education-section" id="education">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <span class="section-label education-label">Trading Education</span>
+                <h2 class="section-title">Master Your Trading Skills</h2>
+                <p class="section-subtitle">
+                    Learn from the experts and trade with confidence. Access our comprehensive library 
+                    of trading guides, interactive tools, and educational content.
+                </p>
+            </div>
+            
+            <div class="education-grid">
+                <div class="education-card scroll-animate">
+                    <div class="education-icon">
+                        <img src="./assets/images/icons/market-analysis.svg" alt="Market Analysis" style="width: 100%; height: 100%;">
+                    </div>
+                    <h3 class="education-card-title">How to Perform Your Own Market Analysis</h3>
+                    <p class="education-card-description">
+                        Learn professional techniques for technical and fundamental analysis. 
+                        Master chart patterns, indicators, and market signals to make independent trading decisions.
+                    </p>
+                    <button class="education-cta" onclick="openGuideForm('market-analysis')">
+                        <i class="fas fa-download"></i>
+                        Download Free Guide
+                    </button>
+                </div>
+                
+                <div class="education-card scroll-animate">
+                    <div class="education-icon">
+                        <img src="./assets/images/icons/ai-robot.svg" alt="AI Robot" style="width: 100%; height: 100%;">
+                    </div>
+                    <h3 class="education-card-title">Why AI is Critical for Modern Trading</h3>
+                    <p class="education-card-description">
+                        Discover how artificial intelligence processes market data faster than humanly possible 
+                        and why AI-assisted trading is becoming essential for competitive advantage.
+                    </p>
+                    <button class="education-cta" onclick="openGuideForm('ai-trading')">
+                        <i class="fas fa-download"></i>
+                        Download Free Guide
+                    </button>
+                </div>
+                
+                <div class="education-card scroll-animate">
+                    <div class="education-icon">
+                        <img src="./assets/images/icons/ai-evolution.svg" alt="AI Evolution" style="width: 100%; height: 100%;">
+                    </div>
+                    <h3 class="education-card-title">AI Evolution: Next Decade Trading Revolution</h3>
+                    <p class="education-card-description">
+                        Explore how AI technology will transform trading in the next 10 years. 
+                        Understanding future trends to stay ahead of the curve and position yourself for success.
+                    </p>
+                    <button class="education-cta" onclick="openGuideForm('ai-future')">
+                        <i class="fas fa-download"></i>
+                        Download Free Guide
+                    </button>
+                </div>
+                
+                <div class="education-card scroll-animate">
+                    <div class="education-icon">
+                        <img src="./assets/images/icons/risk-management.svg" alt="Risk Management" style="width: 100%; height: 100%;">
+                    </div>
+                    <h3 class="education-card-title">Complete Risk Management Mastery</h3>
+                    <p class="education-card-description">
+                        Protect your capital with proven risk management strategies. 
+                        Learn position sizing, stop-loss placement, and portfolio diversification techniques.
+                    </p>
+                    <button class="education-cta" onclick="openGuideForm('risk-management')">
+                        <i class="fas fa-download"></i>
+                        Download Free Guide
+                    </button>
+                </div>
+                
+                <div class="education-card scroll-animate">
+                    <div class="education-icon">
+                        <img src="./assets/images/icons/beginner-book.svg" alt="Beginner Book" style="width: 100%; height: 100%;">
+                    </div>
+                    <h3 class="education-card-title">Complete Beginner's Trading Guide</h3>
+                    <p class="education-card-description">
+                        Start your trading journey with confidence. 
+                        Comprehensive guide covering basics, terminology, platform usage, and your first trades.
+                    </p>
+                    <button class="education-cta" onclick="openGuideForm('beginners-guide')">
+                        <i class="fas fa-download"></i>
+                        Download Free Guide
+                    </button>
+                </div>
+                
+                <div class="education-card scroll-animate">
+                    <div class="education-icon">
+                        <img src="./assets/images/icons/technical-microscope.svg" alt="Technical Microscope" style="width: 100%; height: 100%;">
+                    </div>
+                    <h3 class="education-card-title">Advanced Technical Analysis Secrets</h3>
+                    <p class="education-card-description">
+                        Master professional-level technical analysis techniques. 
+                        Advanced patterns, multi-timeframe analysis, and institutional trading strategies.
+                    </p>
+                    <button class="education-cta" onclick="openGuideForm('technical-analysis')">
+                        <i class="fas fa-download"></i>
+                        Download Free Guide
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE TOOLS -->
+    <section class="tools-section">
+        <div class="container">
+            <div class="tools-why">
+                <div class="tools-header">
+                    <h2 class="tools-title">Free Interactive Trading Tools</h2>
+                    <p class="tools-subtitle">Practice and analyze with our professional‑grade calculators and simulators</p>
+                </div>
+                <div class="tools-grid-why">
+                    <!-- Testimonial (left) -->
+                    <article class="tool-card-why testimonial">
+                        <div class="tool-testimonial-author">
+                            <img class="tool-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&h=200&fit=crop&crop=faces" alt="Reviewer avatar" loading="lazy">
+                            <div>
+                                <div class="tool-name">David Kim</div>
+                                <div class="tool-role">Software Engineer</div>
+                            </div>
+                        </div>
+                        <div class="tool-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="tool-quote">“The calculators and simulator gave me clarity before risking capital. Simple, fast, effective.”</p>
+                    </article>
+
+                    <!-- Feature list (middle): card itself animates vertically; shows 4 rows at a time -->
+                    <article class="tool-card-why feature-marquee">
+                        <div class="feature-marquee-list">
+                            <div class="tool-row"><span class="tool-feature-icon"><i class="fas fa-shield-halved"></i></span><span class="tool-feature-text">Risk Calculator</span></div>
+                            <div class="tool-row"><span class="tool-feature-icon"><i class="fas fa-chart-pie"></i></span><span class="tool-feature-text">Portfolio Analyzer</span></div>
+                            <div class="tool-row"><span class="tool-feature-icon"><i class="fas fa-coins"></i></span><span class="tool-feature-text">Profit/Loss Calculator</span></div>
+                            <div class="tool-row"><span class="tool-feature-icon"><i class="fas fa-gamepad"></i></span><span class="tool-feature-text">Market Simulator</span></div>
+                            <div class="tool-row"><span class="tool-feature-icon"><i class="fas fa-bell"></i></span><span class="tool-feature-text">Signal Playbooks</span></div>
+                            <div class="tool-row"><span class="tool-feature-icon"><i class="fas fa-sliders"></i></span><span class="tool-feature-text">Scenario Testing</span></div>
+                            <!-- duplicate for seamless loop -->
+                            <div class="tool-row"><span class="tool-feature-icon"><i class="fas fa-shield-halved"></i></span><span class="tool-feature-text">Risk Calculator</span></div>
+                            <div class="tool-row"><span class="tool-feature-icon"><i class="fas fa-chart-pie"></i></span><span class="tool-feature-text">Portfolio Analyzer</span></div>
+                            <div class="tool-row"><span class="tool-feature-icon"><i class="fas fa-coins"></i></span><span class="tool-feature-text">Profit/Loss Calculator</span></div>
+                            <div class="tool-row"><span class="tool-feature-icon"><i class="fas fa-gamepad"></i></span><span class="tool-feature-text">Market Simulator</span></div>
+                            <div class="tool-row"><span class="tool-feature-icon"><i class="fas fa-bell"></i></span><span class="tool-feature-text">Signal Playbooks</span></div>
+                            <div class="tool-row"><span class="tool-feature-icon"><i class="fas fa-sliders"></i></span><span class="tool-feature-text">Scenario Testing</span></div>
+                        </div>
+                    </article>
+
+                    <!-- Testimonial (right) -->
+                    <article class="tool-card-why testimonial">
+                        <div class="tool-testimonial-author">
+                            <img class="tool-avatar" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?q=80&w=200&h=200&fit=crop&crop=faces" alt="Reviewer avatar" loading="lazy">
+                            <div>
+                                <div class="tool-name">Michael Rodriguez</div>
+                                <div class="tool-role">Tech Entrepreneur</div>
+                            </div>
+                        </div>
+                        <div class="tool-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="tool-quote">“The tools made it easy to translate insights into decisions. Fast, clear, and practical.”</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <span class="section-label">Success Stories</span>
+                <h2 class="section-title">What Our Traders Say</h2>
+                <p class="section-subtitle">
+                    Real testimonials from traders who have experienced the benefits of our platform
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        I was hesitant to start trading after years of uncertainty. This platform helped me understand the market and make informed decisions. After 8 months, I'm seeing positive results and feel confident in my choices.
+                    </div>
+                    <div class="testimonial-author">
+                        <img class="author-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=200&fit=crop&crop=faces" alt="Customer avatar" loading="lazy">
+                        <div class="author-info">
+                            <h4>David Kim</h4>
+                            <p>Software Engineer, San Francisco</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        As someone who worked in banking, I was skeptical about trading platforms. But the professional and transparent approach here convinced me. The service is excellent and the results speak for themselves.
+                    </div>
+                    <div class="testimonial-author">
+                        <img class="author-avatar" src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?q=80&w=200&h=200&fit=crop&crop=faces" alt="Customer avatar" loading="lazy">
+                        <div class="author-info">
+                            <h4>Sarah Lopez</h4>
+                            <p>Financial Advisor, Chicago</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        The risk management tools really work. The platform helped me avoid several costly mistakes and improve my portfolio performance. I highly recommend it to anyone serious about trading.
+                    </div>
+                    <div class="testimonial-author">
+                        <img class="author-avatar" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=200&h=200&fit=crop&crop=faces" alt="Customer avatar" loading="lazy">
+                        <div class="author-info">
+                            <h4>Michael Rodriguez</h4>
+                            <p>Tech Entrepreneur, Austin</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="far fa-star star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta-container scroll-animate">
+                <h2>Ready to Transform Your Trading?</h2>
+                <p>
+                    Join thousands of traders who have already chosen the smart approach to investing. 
+                    Start with a free trial and see the difference professional-grade tools can make.
+                </p>
+                <div class="final-cta-buttons">
+                    <button class="btn-white" onclick="openSignupForm()">
+                        <i class="fas fa-rocket"></i>
+                        Start Free Trial
+                    </button>
+                    <button class="btn-outline" onclick="openContactForm()">
+                        <i class="fas fa-calendar"></i>
+                        Schedule Consultation
+                    </button>
+                </div>
+                <p class="final-disclaimer">
+                    30-day free trial • No credit card required • Cancel anytime
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Insight X</h3>
+                    <p style="margin-top: 1rem; line-height: 1.6;">
+                        Advanced trading platform combining artificial intelligence with human expertise for optimal results.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#" onclick="openPricingPage()">Pricing</a></li>
+                        <li><a href="#">Performance</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#" onclick="openContactForm()">Contact Us</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Insight X. All rights reserved. Terms of Service | Privacy Policy | Risk Disclosure</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FORM MODALS -->
+    
+    <!-- Signup Form Modal -->
+    <div class="form-modal" id="signupModal">
+        <div class="form-container">
+            <button class="form-close" onclick="closeModal('signupModal')">&times;</button>
+            <h2 class="form-title">Start Your Free Trial</h2>
+            <p class="form-subtitle">Join 28,000+ traders already using Insight X</p>
+            
+            <form onsubmit="submitSignupForm(event)">
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-input" placeholder="Phone Number (Optional)">
+                </div>
+                <button type="submit" class="form-submit">Start Free Trial</button>
+                <p class="form-disclaimer">
+                    By signing up, you agree to our Terms of Service and Privacy Policy. 
+                    No credit card required for the 30-day trial.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div class="form-modal" id="contactModal">
+        <div class="form-container">
+            <button class="form-close" onclick="closeModal('contactModal')">&times;</button>
+            <h2 class="form-title">Schedule Your Personal Demo</h2>
+            <p class="form-subtitle">Get a personalized consultation with one of our trading experts</p>
+            
+            <form onsubmit="submitContactForm(event)">
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-input" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Company (Optional)">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-textarea" placeholder="Tell us about your trading experience (e.g., Beginner, intermediate, or advanced)"></textarea>
+                </div>
+                <button type="submit" class="form-submit">Schedule Demo</button>
+                <p class="form-disclaimer">
+                    Our team will contact you within 24 hours to schedule your personalized demo.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Guide Download Form Modal -->
+    <div class="form-modal" id="guideModal">
+        <div class="form-container">
+            <button class="form-close" onclick="closeModal('guideModal')">&times;</button>
+            <h2 class="form-title" id="guideTitle">Download Free Trading Guide</h2>
+            <p class="form-subtitle" id="guideSubtitle">Get instant access to professional trading insights</p>
+            
+            <form onsubmit="submitGuideForm(event)">
+                <input type="hidden" id="guideType" value="">
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <select class="form-input" required>
+                        <option value="">Trading Experience Level</option>
+                        <option value="beginner">Beginner (0-1 years)</option>
+                        <option value="intermediate">Intermediate (1-3 years)</option>
+                        <option value="advanced">Advanced (3+ years)</option>
+                        <option value="professional">Professional Trader</option>
+                    </select>
+                </div>
+                <button type="submit" class="form-submit">Download Free Guide</button>
+                <p class="form-disclaimer">
+                    We'll send the guide to your email immediately. You'll also receive our weekly trading newsletter.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="40" cy="40" r="35" fill="url(#gradient1)"/>
+  <circle cx="30" cy="30" r="8" fill="white" opacity="0.9"/>
+  <circle cx="50" cy="30" r="8" fill="white" opacity="0.9"/>
+  <circle cx="40" cy="50" r="10" fill="white" opacity="0.9"/>
+  <circle cx="30" cy="30" r="3" fill="#1e40af"/>
+  <circle cx="50" cy="30" r="3" fill="#1e40af"/>
+  <circle cx="40" cy="50" r="4" fill="#1e40af"/>
+  <path d="M25 35 C25 30, 27 28, 30 30" stroke="#1e40af" stroke-width="2" fill="none"/>
+  <path d="M55 35 C55 30, 53 28, 50 30" stroke="#1e40af" stroke-width="2" fill="none"/>
+  <path d="M30 55 C30 50, 35 45, 40 50 C45 45, 50 50, 50 55" stroke="#1e40af" stroke-width="2" fill="none"/>
+  <circle cx="40" cy="25" r="2" fill="#10b981"/>
+  <circle cx="30" cy="20" r="1.5" fill="#10b981"/>
+  <circle cx="50" cy="20" r="1.5" fill="#10b981"/>
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af"/>
+      <stop offset="50%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+  </defs>
+</svg>

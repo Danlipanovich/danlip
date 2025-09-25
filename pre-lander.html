@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Perform Your Own Market Analysis | Insight X</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- SKIP LINK FOR ACCESSIBILITY -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- HEADER (imported from index.html) -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-container">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    Insight X
+                </a>
+                <nav class="nav" id="siteNav">
+                    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-links">
+                        <li><a href="index.html#features" class="nav-link">Features</a></li>
+                        <li><a href="index.html#education" class="nav-link">Education</a></li>
+                        <li><a href="index.html#testimonials" class="nav-link">Reviews</a></li>
+                        <li><a href="index.html#about" class="nav-link">About</a></li>
+                    </ul>
+                    <button class="header-cta" onclick="openSignupForm()">Start Free Trial</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <script>
+      // Mobile nav toggle (synced with index.html)
+      document.addEventListener('DOMContentLoaded', () => {
+        const nav = document.getElementById('siteNav');
+        const toggle = nav ? nav.querySelector('.nav-toggle') : null;
+        if (toggle && nav) {
+          toggle.addEventListener('click', () => {
+            const expanded = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', String(!expanded));
+            nav.classList.toggle('open');
+          });
+        }
+      });
+    </script>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="tools-section article-page" id="main-content" style="padding-top: 6rem; padding-bottom: 0;">
+        <div class="container">
+            <div class="article-grid">
+                <!-- Main Article -->
+                <article class="article-card light-article" dir="ltr">
+                    <header class="article-header">
+                        <div class="article-meta">
+                            <span class="meta-chip">Trading Education</span>
+                            <span class="meta-dot">•</span>
+                            <span class="meta-text">December 2024</span>
+                            <span class="meta-dot">•</span>
+                            <span class="meta-text">8 min read</span>
+                        </div>
+                        <h2 class="article-title">How to Perform Your Own Market Analysis</h2>
+                        <div class="author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="Dr. Sarah Chen" loading="lazy">
+                            </div>
+                            <div>
+                                <div class="author-name">Dr. Sarah Chen</div>
+                                <div class="author-role">Market Analysis Expert</div>
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Featured Image -->
+                    <figure class="article-figure">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop&crop=center" alt="Market Analysis Dashboard" loading="lazy">
+                        <figcaption>Professional market analysis: combining technical indicators with fundamental insights</figcaption>
+                    </figure>
+
+                    <!-- Article Body -->
+                    <div class="article-body">
+                        <p class="lead">Master professional trading techniques with our comprehensive educational resources. Learn from experts and trade with confidence.</p>
+                        <p>
+                            Access our complete library of trading guides, interactive tools, and educational content designed to help you succeed in today's dynamic markets. Whether you're a beginner or an experienced trader, our resources will enhance your skills and improve your trading performance.
+                        </p>
+
+                        <h3>Why Choose Our Trading Education?</h3>
+                        <p>
+                            Our educational content is designed by professional traders and market analysts with years of experience. Each guide combines theoretical knowledge with practical applications, giving you the tools you need to make informed trading decisions.
+                        </p>
+
+                        <h3>What You'll Learn</h3>
+                        <ul>
+                            <li><strong>Technical Analysis:</strong> Chart patterns, indicators, and price action signals</li>
+                            <li><strong>Fundamental Analysis:</strong> Economic data interpretation and market drivers</li>
+                            <li><strong>Risk Management:</strong> Position sizing and portfolio protection strategies</li>
+                            <li><strong>AI Trading:</strong> How artificial intelligence is revolutionizing trading</li>
+                            <li><strong>Market Psychology:</strong> Understanding sentiment and contrarian opportunities</li>
+                        </ul>
+
+                        <blockquote class="article-quote">
+                            "The best traders never stop learning. Our educational resources provide the foundation for long-term success in the markets."
+                            <cite>— Dr. Sarah Chen, Market Analysis Expert</cite>
+                        </blockquote>
+
+                        <div class="tag-list">
+                            <span class="tag-label">Tags:</span>
+                            <a href="#" class="tag">Trading Education</a>
+                            <a href="#" class="tag">Market Analysis</a>
+                            <a href="#" class="tag">AI Trading</a>
+                            <a href="#" class="tag">Risk Management</a>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <section class="article-cta">
+                        <h3>Ready to Master Trading?</h3>
+                        <p>Download our complete educational toolkit and start making informed trading decisions today.</p>
+                        <div class="final-cta-buttons">
+                            <button class="btn-white" onclick="openGuideForm('market-analysis')"><i class="fas fa-download"></i> Download Free Guide</button>
+                            <a class="btn-outline" href="index.html#education"><i class="fas fa-chart-line"></i> View All Guides</a>
+                        </div>
+                    </section>
+
+
+                    <!-- Comments Section -->
+                    <section class="comments-section" id="comments">
+                        <div class="comments-list">
+                            <div class="comment">
+                                <div class="comment-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Alex Thompson" loading="lazy">
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <h4 class="comment-author">Alex Thompson</h4>
+                                        <span class="comment-date">2 days ago</span>
+                                    </div>
+                                    <div class="comment-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="comment-text">
+                                        The market analysis guide completely changed my approach to trading. I've been using the techniques for 3 months now and my success rate has improved by 40%. The step-by-step framework is exactly what I needed.
+                                    </p>
+                                    <div class="comment-actions">
+                                        <button class="comment-like"><i class="fas fa-thumbs-up"></i> 12</button>
+                                        <button class="comment-reply"><i class="fas fa-reply"></i> Reply</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="comment">
+                                <div class="comment-avatar">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Martinez" loading="lazy">
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <h4 class="comment-author">Sarah Martinez</h4>
+                                        <span class="comment-date">5 days ago</span>
+                                    </div>
+                                    <div class="comment-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="comment-text">
+                                        As a beginner, I was overwhelmed by all the information out there. This platform's educational content is so well-structured and easy to understand. The AI trading guide opened my eyes to the future of trading.
+                                    </p>
+                                    <div class="comment-actions">
+                                        <button class="comment-like"><i class="fas fa-thumbs-up"></i> 8</button>
+                                        <button class="comment-reply"><i class="fas fa-reply"></i> Reply</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="comment">
+                                <div class="comment-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/51.jpg" alt="Michael Chen" loading="lazy">
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <h4 class="comment-author">Michael Chen</h4>
+                                        <span class="comment-date">1 week ago</span>
+                                    </div>
+                                    <div class="comment-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <p class="comment-text">
+                                        The risk management guide saved me from several potential losses. The position sizing techniques are particularly valuable. I wish I had found this resource earlier in my trading journey.
+                                    </p>
+                                    <div class="comment-actions">
+                                        <button class="comment-like"><i class="fas fa-thumbs-up"></i> 15</button>
+                                        <button class="comment-reply"><i class="fas fa-reply"></i> Reply</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="comment">
+                                <div class="comment-avatar">
+                                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Wilson" loading="lazy">
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <h4 class="comment-author">Emma Wilson</h4>
+                                        <span class="comment-date">2 weeks ago</span>
+                                    </div>
+                                    <div class="comment-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="comment-text">
+                                        The technical analysis secrets guide is incredible. The advanced patterns section helped me identify several profitable setups I would have missed otherwise. Highly recommend for serious traders.
+                                    </p>
+                                    <div class="comment-actions">
+                                        <button class="comment-like"><i class="fas fa-thumbs-up"></i> 23</button>
+                                        <button class="comment-reply"><i class="fas fa-reply"></i> Reply</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add Comment Form -->
+                        <div class="add-comment">
+                            <h4>Share Your Experience</h4>
+                            <form class="comment-form" onsubmit="submitCommentForm(event)">
+                                <div class="comment-form-row">
+                                    <input type="text" class="comment-form-input" placeholder="Your Name" required>
+                                    <input type="email" class="comment-form-input" placeholder="Email (Optional)">
+                                </div>
+                                <div class="comment-form-group">
+                                    <label class="comment-form-label">Rating</label>
+                                    <div class="rating-input">
+                                        <input type="radio" name="rating" value="5" id="star5">
+                                        <label for="star5"><i class="fas fa-star"></i></label>
+                                        <input type="radio" name="rating" value="4" id="star4">
+                                        <label for="star4"><i class="fas fa-star"></i></label>
+                                        <input type="radio" name="rating" value="3" id="star3">
+                                        <label for="star3"><i class="fas fa-star"></i></label>
+                                        <input type="radio" name="rating" value="2" id="star2">
+                                        <label for="star2"><i class="fas fa-star"></i></label>
+                                        <input type="radio" name="rating" value="1" id="star1">
+                                        <label for="star1"><i class="fas fa-star"></i></label>
+                                    </div>
+                                </div>
+                                <div class="comment-form-group">
+                                    <label class="comment-form-label">Your Comment</label>
+                                    <textarea class="comment-form-textarea" placeholder="Share your trading experience or ask a question..." required></textarea>
+                                </div>
+                                <button type="submit" class="comment-submit-btn">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Post Comment
+                                </button>
+                            </form>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-section newsletter-quick-section" id="newsletter">
+                        <div class="newsletter-quick-content">
+                            <div class="newsletter-quick-icon">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <h3 class="newsletter-quick-title">Stay Informed</h3>
+                            <p class="newsletter-quick-text">Get the latest market insights and trading tips delivered directly to your inbox. Join our community of successful traders.</p>
+                        </div>
+                        <form class="newsletter-quick-form" onsubmit="submitNewsletterForm(event)">
+                            <input type="email" placeholder="Enter your email" class="newsletter-quick-input" required>
+                            <button class="newsletter-quick-button" type="submit">
+                                <i class="fas fa-arrow-right"></i>
+                                Subscribe Now
+                            </button>
+                        </form>
+                        <div class="newsletter-quick-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Weekly market analysis</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Exclusive trading strategies</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Early access to new guides</span>
+                            </div>
+                        </div>
+                        <p class="newsletter-quick-disclaimer">
+                            Join 15,000+ traders. No spam, unsubscribe anytime.
+                        </p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Most Popular Trading Guides</h3>
+                        <p class="sidebar-subtitle">Essential resources that traders rely on for consistent success</p>
+                        <div class="sidebar-articles">
+                            <div class="sidebar-article-card">
+                                <div class="sidebar-article-image">
+                                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=300&h=200&fit=crop&crop=center" alt="Market Analysis Dashboard" loading="lazy">
+                                </div>
+                                <div class="sidebar-article-content">
+                                    <h4 class="sidebar-article-title">How to Perform Your Own Market Analysis</h4>
+                                    <p class="sidebar-article-description">Learn professional techniques for technical and fundamental analysis.</p>
+                                    <button class="sidebar-article-cta" onclick="openGuideForm('market-analysis')">
+                                        <i class="fas fa-download"></i> Download Guide
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar-article-card">
+                                <div class="sidebar-article-image">
+                                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=300&h=200&fit=crop&crop=center" alt="AI Trading Technology" loading="lazy">
+                                </div>
+                                <div class="sidebar-article-content">
+                                    <h4 class="sidebar-article-title">Why AI is Critical for Modern Trading</h4>
+                                    <p class="sidebar-article-description">Discover how AI processes market data faster than humanly possible.</p>
+                                    <button class="sidebar-article-cta" onclick="openGuideForm('ai-trading')">
+                                        <i class="fas fa-download"></i> Download Guide
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar-article-card">
+                                <div class="sidebar-article-image">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop&crop=center" alt="AI Future Trading" loading="lazy">
+                                </div>
+                                <div class="sidebar-article-content">
+                                    <h4 class="sidebar-article-title">AI Evolution: Next Decade Trading Revolution</h4>
+                                    <p class="sidebar-article-description">Explore how AI will transform trading in the next 10 years.</p>
+                                    <button class="sidebar-article-cta" onclick="openGuideForm('ai-future')">
+                                        <i class="fas fa-download"></i> Download Guide
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar-article-card">
+                                <div class="sidebar-article-image">
+                                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&h=200&fit=crop&crop=center" alt="Risk Management Strategy" loading="lazy">
+                                </div>
+                                <div class="sidebar-article-content">
+                                    <h4 class="sidebar-article-title">Complete Risk Management Mastery</h4>
+                                    <p class="sidebar-article-description">Protect your capital with proven risk management strategies.</p>
+                                    <button class="sidebar-article-cta" onclick="openGuideForm('risk-management')">
+                                        <i class="fas fa-download"></i> Download Guide
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar-article-card">
+                                <div class="sidebar-article-image">
+                                    <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=300&h=200&fit=crop&crop=center" alt="Trading Education" loading="lazy">
+                                </div>
+                                <div class="sidebar-article-content">
+                                    <h4 class="sidebar-article-title">Complete Beginner's Trading Guide</h4>
+                                    <p class="sidebar-article-description">Start your trading journey with confidence and comprehensive basics.</p>
+                                    <button class="sidebar-article-cta" onclick="openGuideForm('beginners-guide')">
+                                        <i class="fas fa-download"></i> Download Guide
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar-article-card">
+                                <div class="sidebar-article-image">
+                                    <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=300&h=200&fit=crop&crop=center" alt="Technical Analysis Charts" loading="lazy">
+                                </div>
+                                <div class="sidebar-article-content">
+                                    <h4 class="sidebar-article-title">Advanced Technical Analysis Secrets</h4>
+                                    <p class="sidebar-article-description">Master professional-level technical analysis techniques.</p>
+                                    <button class="sidebar-article-cta" onclick="openGuideForm('technical-analysis')">
+                                        <i class="fas fa-download"></i> Download Guide
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Newsletter Signup Section -->
+    <section class="newsletter-signup-section">
+        <div class="container">
+            <div class="newsletter-signup-content">
+                <div class="newsletter-signup-text">
+                    <h2>Stay Ahead of the Markets</h2>
+                    <p>Get exclusive trading insights, market analysis, and expert strategies delivered to your inbox weekly. Join thousands of successful traders who trust our insights.</p>
+                </div>
+                <form class="newsletter-signup-form" onsubmit="submitNewsletterForm(event)">
+                    <div class="newsletter-input-group">
+                        <input type="email" placeholder="Enter your email address" class="newsletter-email-input" required>
+                        <button type="submit" class="newsletter-submit-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            Subscribe Now
+                        </button>
+                    </div>
+                    <p class="newsletter-disclaimer">Join 15,000+ traders. No spam, unsubscribe anytime.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Articles Slider -->
+    <section class="featured-articles-section">
+        <div class="container">
+            <div class="featured-articles-header">
+                <h2>Featured Trading Resources</h2>
+                <p>Discover our most comprehensive guides and tools for trading success</p>
+            </div>
+            <div class="articles-carousel-container">
+                <div class="articles-slider" id="articlesSlider">
+                    <div class="article-slide">
+                        <div class="article-slide-image">
+                            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=250&fit=crop&crop=center" alt="Market Analysis" loading="lazy">
+                        </div>
+                        <div class="article-slide-content">
+                            <h3>Complete Market Analysis Framework</h3>
+                            <p>Master the art of market analysis with our comprehensive framework that combines technical and fundamental analysis.</p>
+                            <a href="#" class="article-slide-cta">Read Guide</a>
+                        </div>
+                    </div>
+                    <div class="article-slide">
+                        <div class="article-slide-image">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop&crop=center" alt="AI Trading" loading="lazy">
+                        </div>
+                        <div class="article-slide-content">
+                            <h3>AI-Powered Trading Strategies</h3>
+                            <p>Discover how artificial intelligence is revolutionizing trading and learn to implement AI-driven strategies.</p>
+                            <a href="#" class="article-slide-cta">Read Guide</a>
+                        </div>
+                    </div>
+                    <div class="article-slide">
+                        <div class="article-slide-image">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=250&fit=crop&crop=center" alt="Risk Management" loading="lazy">
+                        </div>
+                        <div class="article-slide-content">
+                            <h3>Advanced Risk Management</h3>
+                            <p>Protect your capital with proven risk management techniques used by professional traders worldwide.</p>
+                            <a href="#" class="article-slide-cta">Read Guide</a>
+                        </div>
+                    </div>
+                    <div class="article-slide">
+                        <div class="article-slide-image">
+                            <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400&h=250&fit=crop&crop=center" alt="Technical Analysis" loading="lazy">
+                        </div>
+                        <div class="article-slide-content">
+                            <h3>Professional Technical Analysis</h3>
+                            <p>Learn advanced chart patterns, indicators, and price action techniques from industry experts.</p>
+                            <a href="#" class="article-slide-cta">Read Guide</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn carousel-prev" onclick="moveSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn carousel-next" onclick="moveSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Insight X</h3>
+                    <p style="margin-top: 1rem; line-height: 1.6;">
+                        Advanced trading platform combining artificial intelligence with human expertise for optimal results.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="#" onclick="openPricingPage()">Pricing</a></li>
+                        <li><a href="#">Performance</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#" onclick="openContactForm()">Contact Us</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Insight X. All rights reserved. Terms of Service | Privacy Policy | Risk Disclosure</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Signup Form Modal (imported to match homepage behavior) -->
+    <div class="form-modal" id="signupModal">
+        <div class="form-container">
+            <button class="form-close" onclick="closeModal('signupModal')">&times;</button>
+            <h2 class="form-title">Start Your Free Trial</h2>
+            <p class="form-subtitle">Join 28,000+ traders already using Insight X</p>
+            <form onsubmit="submitSignupForm(event)">
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-input" placeholder="Phone Number (Optional)">
+                </div>
+                <button type="submit" class="form-submit">Start Free Trial</button>
+                <p class="form-disclaimer">
+                    By signing up, you agree to our Terms of Service and Privacy Policy. 
+                    No credit card required for the 30-day trial.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+    
+    <!-- Micro-animations and functionality -->
+    <script>
+        // Animate framework cards on scroll
+        function animateFrameworkCards() {
+            const cards = document.querySelectorAll('.framework-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('animate');
+                        }, entry.target.dataset.delay || 0);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => observer.observe(card));
+        }
+        
+        // Animate analysis steps
+        function animateAnalysisSteps() {
+            const steps = document.querySelectorAll('.analysis-step');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.2 });
+            
+            steps.forEach(step => {
+                step.style.opacity = '0';
+                step.style.transform = 'translateY(20px)';
+                step.style.transition = 'all 0.6s ease';
+                observer.observe(step);
+            });
+        }
+        
+        // Newsletter form submission
+        function submitNewsletterForm(event) {
+            event.preventDefault();
+            const emailInput = event.target.querySelector('.newsletter-email-input') || event.target.querySelector('.newsletter-quick-input');
+            const email = emailInput.value;
+            alert('Thank you for subscribing! You\'ll receive our weekly trading insights soon.');
+            event.target.reset();
+        }
+
+        // Comment form submission
+        function submitCommentForm(event) {
+            event.preventDefault();
+            alert('Thank you for your comment! It will be reviewed and published soon.');
+            event.target.reset();
+        }
+
+        // Handle avatar image errors
+        function handleAvatarErrors() {
+            // Handle comment avatars
+            const avatarImages = document.querySelectorAll('.comment-avatar img');
+            avatarImages.forEach((img, index) => {
+                img.addEventListener('error', function() {
+                    const names = ['AT', 'SM', 'MC', 'EW'];
+                    const colors = [
+                        'linear-gradient(135deg, #3b82f6, #1d4ed8)',
+                        'linear-gradient(135deg, #10b981, #059669)',
+                        'linear-gradient(135deg, #f59e0b, #d97706)',
+                        'linear-gradient(135deg, #8b5cf6, #7c3aed)'
+                    ];
+                    
+                    const avatarIcon = document.createElement('div');
+                    avatarIcon.className = 'avatar-icon';
+                    avatarIcon.style.background = colors[index] || colors[0];
+                    avatarIcon.innerHTML = `<span>${names[index] || 'U'}</span>`;
+                    
+                    this.parentNode.replaceChild(avatarIcon, this);
+                });
+            });
+
+            // Handle author avatar
+            const authorAvatar = document.querySelector('.author-avatar img');
+            if (authorAvatar) {
+                authorAvatar.addEventListener('error', function() {
+                    const fallbackIcon = document.createElement('i');
+                    fallbackIcon.className = 'fas fa-user-circle';
+                    fallbackIcon.style.fontSize = '1.5rem';
+                    fallbackIcon.style.color = '#3b82f6';
+                    
+                    this.parentNode.replaceChild(fallbackIcon, this);
+                });
+            }
+        }
+
+        // Carousel functionality - infinite loop without duplicating items
+        const slider = document.getElementById('articlesSlider');
+        const dots = document.querySelectorAll('.carousel-dots .dot');
+        const totalItems = slider ? slider.children.length : 0;
+        let logicalIndex = 0; // 0..totalItems-1
+        let isAnimating = false;
+
+        function getStepDistance() {
+            if (!slider || slider.children.length < 2) return 0;
+            const first = slider.children[0].getBoundingClientRect();
+            const second = slider.children[1].getBoundingClientRect();
+            return Math.round(second.left - first.left);
+        }
+
+        function updateDots(delta = 0) {
+            if (!dots || dots.length === 0 || totalItems === 0) return;
+            logicalIndex = (logicalIndex + delta + totalItems) % totalItems;
+            dots.forEach(dot => dot.classList.remove('active'));
+            if (dots[logicalIndex]) dots[logicalIndex].classList.add('active');
+        }
+
+        function nextSlide() {
+            if (isAnimating || !slider) return;
+            isAnimating = true;
+            const step = getStepDistance();
+            slider.style.transition = 'transform 0.5s ease';
+            slider.style.transform = `translateX(-${step}px)`;
+            slider.addEventListener('transitionend', function handleNext() {
+                slider.removeEventListener('transitionend', handleNext);
+                slider.style.transition = 'none';
+                slider.appendChild(slider.firstElementChild);
+                slider.style.transform = 'translateX(0)';
+                requestAnimationFrame(() => {
+                    isAnimating = false;
+                });
+                updateDots(1);
+            }, { once: true });
+        }
+
+        function prevSlide() {
+            if (isAnimating || !slider) return;
+            isAnimating = true;
+            const step = getStepDistance();
+            slider.style.transition = 'none';
+            slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+            slider.style.transform = `translateX(-${step}px)`;
+            requestAnimationFrame(() => {
+                slider.style.transition = 'transform 0.5s ease';
+                slider.style.transform = 'translateX(0)';
+                slider.addEventListener('transitionend', function handlePrev() {
+                    slider.removeEventListener('transitionend', handlePrev);
+                    isAnimating = false;
+                }, { once: true });
+            });
+            updateDots(-1);
+        }
+
+        function moveSlide(n) {
+            if (n > 0) nextSlide();
+            else if (n < 0) prevSlide();
+        }
+
+        function currentSlide(n) {
+            if (!Number.isInteger(n) || totalItems === 0) return;
+            // Compute shortest direction from logicalIndex to (n-1)
+            const target = (n - 1 + totalItems) % totalItems;
+            const forward = (target - logicalIndex + totalItems) % totalItems;
+            const backward = (logicalIndex - target + totalItems) % totalItems;
+            if (forward === 0) return;
+            if (forward <= backward) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+        }
+
+        // Auto-play carousel
+        function autoPlay() { nextSlide(); }
+
+        // Initialize animations when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            animateFrameworkCards();
+            animateAnalysisSteps();
+            handleAvatarErrors();
+
+            // Carousel init
+            updateDots(0);
+            setInterval(autoPlay, 5000); // Auto-play every 5 seconds
+
+            // Mobile nav toggle
+            const nav = document.getElementById('siteNav');
+            const toggle = nav ? nav.querySelector('.nav-toggle') : null;
+            const links = nav ? nav.querySelector('.nav-links') : null;
+            if (toggle && nav && links) {
+                toggle.addEventListener('click', () => {
+                    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                    toggle.setAttribute('aria-expanded', String(!expanded));
+                    nav.classList.toggle('open');
+                    links.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+
+<style>
+    /* Page-specific mobile overrides */
+    @media (max-width: 768px) {
+        #main-content { padding-top: 0.5rem !important; }
+    }
+    /* Complete sidebar reset */
+    .article-page .sidebar * { margin: 0 !important; }
+    .article-page .sidebar { display: flex !important; flex-direction: column !important; gap: 1rem !important; }
+    .article-page .sidebar > * { margin: 0 !important; }
+    
+    /* Article layout scoped to this page, aligned to site colors */
+    .article-page .article-grid { display: grid; grid-template-columns: 1fr; gap: 2.25rem; }
+    .article-page .article-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 1.75rem; }
+    .article-page .article-header { display: grid; gap: 1rem; max-width: 64ch; }
+    .article-page .article-title { font-size: 2rem; line-height: 1.25; color: #fff; letter-spacing: -0.01em; }
+    .article-page .article-meta { display: flex; flex-wrap: wrap; gap: .6rem .8rem; align-items: center; color: rgba(255,255,255,0.7); font-size: .95rem; }
+    .article-page .meta-chip { background: var(--secondary-blue, rgba(59,130,246,0.15)); color: #fff; padding: .25rem .5rem; border-radius: 999px; font-weight: 600; }
+    .article-page .meta-dot { opacity: .6; }
+    .article-page .meta-text { opacity: .9; }
+    .article-page .author { display: flex; align-items: center; gap: .75rem; margin-top: .25rem; }
+    .article-page .author-avatar { width: 44px; height: 44px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background: rgba(59,130,246,0.2); color: #3b82f6; font-size: 1.5rem; overflow: hidden; }
+    .article-page .author-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .article-page .author-name { color: #fff; font-weight: 600; }
+    .article-page .author-role { color: rgba(255,255,255,0.7); font-size: .9rem; }
+    .article-page .article-figure { margin: 0 0 1.5rem 0; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); }
+    .article-page .article-figure img { width: 100%; height: 300px; object-fit: cover; display: block; margin: 0; }
+    .article-page .article-figure figcaption { padding: .5rem .75rem; color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.06); font-size: .9rem; }
+    .article-page .article-body { color: rgba(255,255,255,0.92); line-height: 1.9; display: grid; gap: 1.25rem; max-width: 72ch; margin-top: 0; }
+    .article-page .article-body .lead { font-size: 1.15rem; color: #fff; font-weight: 600; line-height: 1.7; }
+    .article-page .article-body h3 { color: #fff; margin-top: .75rem; font-size: 1.3rem; letter-spacing: -0.005em; }
+    .article-page .article-body ul, .article-page .article-body ol { padding-inline-start: 1.25rem; display: grid; gap: .6rem; }
+    .article-page .article-body .article-quote { border-inline-start: 4px solid rgba(59,130,246,0.6); padding: .75rem 1rem; background: rgba(255,255,255,0.02); border-radius: 8px; }
+    .article-page .article-body .article-quote cite { display: block; margin-top: .5rem; color: rgba(255,255,255,0.8); font-style: normal; }
+    .article-page .image-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #2563eb, #1d4ed8); color: #fff; min-height: 200px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); }
+    .article-page .image-placeholder i { font-size: 2rem; margin-bottom: 0.5rem; }
+    .article-page .tag-list { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
+    .article-page .tag-label { color: rgba(255,255,255,0.9); font-weight: 600; margin-inline-end: .25rem; }
+    .article-page .tag { display: inline-block; padding: .25rem .5rem; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 999px; color: rgba(255,255,255,0.95); text-decoration: none; }
+    .article-page .article-cta { margin-top: 1.75rem; padding: 1.5rem 1.75rem; border-radius: 14px; background: linear-gradient(90deg, var(--primary-blue, #2563eb), var(--secondary-blue, #1e40af)); color: #fff; }
+    .article-page .article-cta h3 { margin: 0 0 .35rem 0; }
+    .article-page .article-cta p { margin: 0 0 .6rem 0; color: rgba(255,255,255,0.96); }
+    /* Removed conflicting rule */
+    .article-page .sidebar-section { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 1.1rem; margin: 0; position: relative; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+    .article-page .newsletter-quick-section { padding: 1.25rem !important; }
+    .article-page .sidebar-title { color: #374151; margin: 0 0 .5rem 0; font-size: 1.15rem; }
+    .article-page .sidebar-subtitle { color: #6b7280; margin: 0 0 1rem 0; font-size: 0.9rem; line-height: 1.4; }
+    /* Increase spacing between sidebar section 2 title and subtitle */
+    .article-page .sidebar > .sidebar-section:nth-child(2) .sidebar-title { margin-bottom: 0.85rem !important; }
+    .article-page .sidebar > .sidebar-section:nth-child(2) .sidebar-subtitle { margin-top: 0 !important; margin-bottom: 1.25rem !important; }
+    /* Unify section headings look */
+    .article-page .sidebar-section .sidebar-title,
+    .article-page .newsletter-quick-title { font-weight: 800; letter-spacing: -0.01em; }
+    .article-page .sidebar-list { display: grid; gap: .75rem; }
+    .article-page .sidebar-item { display: grid; grid-template-columns: 88px 1fr; gap: .75rem; align-items: center; padding: .5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.015); color: inherit; text-decoration: none; }
+    .article-page .sidebar-item:hover { border-color: rgba(59,130,246,0.35); }
+    .article-page .sidebar-image { width: 88px; height: 64px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: #fff; border-radius: 8px; font-size: 1.5rem; }
+    .article-page .item-title { color: #fff; font-weight: 600; }
+    .article-page .item-meta { color: rgba(255,255,255,0.7); font-size: .9rem; }
+    .article-page .newsletter-form { display:flex; gap:.5rem; }
+    .article-page .newsletter-input { flex:1; padding:.6rem .75rem; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.03); color:#fff; }
+    .article-page .newsletter-button { padding:.6rem .9rem; border-radius:10px; border:1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.08); color:#fff; cursor:pointer; }
+
+    /* Sidebar Articles */
+    /* Remove top accent bar from the articles section wrapper */
+    .article-page .sidebar > .sidebar-section:not(#newsletter)::before { content: none; }
+    .sidebar-articles { display: grid; gap: 0; }
+    .sidebar-article-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 1.5rem; transition: all 0.3s ease; position: relative; overflow: hidden; margin: 0 !important; }
+    .sidebar-article-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #3b82f6, #1e40af); opacity: 0; transition: opacity 0.3s ease; }
+    .sidebar-article-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+    .sidebar-article-card:hover::before { opacity: 1; }
+    .sidebar-article-image { width: 100%; height: 120px; border-radius: 12px; overflow: hidden; margin-bottom: 1rem; }
+    .sidebar-article-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+    .sidebar-article-card:hover .sidebar-article-image img { transform: scale(1.05); }
+    .sidebar-article-title { color: #374151; margin: 0 0 0.85rem 0; font-size: 1.1rem; line-height: 1.3; font-weight: 600; }
+    .sidebar-article-description { color: #6b7280; margin: 0 0 1.1rem 0; font-size: 0.9rem; line-height: 1.5; }
+    /* Increase spacing under images and around text in the second sidebar section (override reset) */
+    .article-page .sidebar > .sidebar-section:nth-child(2) .sidebar-article-image { margin-bottom: 1.25rem !important; }
+    .article-page .sidebar > .sidebar-section:nth-child(2) .sidebar-article-content { display: grid; gap: .5rem; }
+    .article-page .sidebar > .sidebar-section:nth-child(2) .sidebar-article-title { margin-bottom: 1rem !important; }
+    .article-page .sidebar > .sidebar-section:nth-child(2) .sidebar-article-description { margin-bottom: 1.25rem !important; line-height: 1.6; }
+    /* Remove extra top padding (green area) inside article cards in section 2 */
+    .article-page .sidebar > .sidebar-section:nth-child(2) .sidebar-article-card { padding-top: 0.5rem !important; }
+    .article-page .sidebar > .sidebar-section:nth-child(2) .sidebar-article-image { margin-top: 0 !important; }
+
+    /* External spacing between sidebar article cards (section 2) */
+    .article-page .sidebar > .sidebar-section:nth-child(2) .sidebar-articles > .sidebar-article-card + .sidebar-article-card { margin-top: 1.25rem !important; }
+    @media (max-width: 768px) {
+        .article-page .sidebar > .sidebar-section:nth-child(2) .sidebar-articles > .sidebar-article-card + .sidebar-article-card { margin-top: 1rem !important; }
+    }
+    .sidebar-article-cta { background: linear-gradient(135deg, #2563eb, #1e40af); color: #fff; border: none; padding: 0.75rem 1rem; border-radius: 10px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; width: 100%; justify-content: center; margin-top: 0.5rem; }
+    .sidebar-article-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4); }
+
+
+    /* Newsletter Quick Section */
+    .newsletter-quick-section { background: linear-gradient(135deg, #0f172a, #1e293b); border: 1px solid rgba(59,130,246,0.2); position: relative; overflow: hidden; margin: 0 !important; }
+    /* Subtle hover lift to match article cards */
+    .newsletter-quick-section { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .newsletter-quick-section:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,0.12); }
+    /* Hard stop: prevent newsletter from stretching to fill sidebar height */
+    .article-page .sidebar #newsletter { flex: 0 0 auto !important; height: auto !important; min-height: 0 !important; }
+    .article-page .sidebar #newsletter > * { height: auto !important; min-height: 0 !important; }
+    .article-page .sidebar { align-items: stretch !important; }
+    .newsletter-quick-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #3b82f6, #1e40af); }
+    .newsletter-quick-content { text-align: center; margin-bottom: 1rem; }
+    .newsletter-quick-icon { font-size: 2.5rem; color: #3b82f6; margin-bottom: 1rem; animation: pulse 2s infinite; }
+    .newsletter-quick-title { color: #374151; margin: 0 0 0.75rem 0; font-size: 1.3rem; font-weight: 700; }
+    .newsletter-quick-text { color: #6b7280; margin: 0 0 0.75rem 0; line-height: 1.6; font-size: 0.95rem; }
+    .newsletter-quick-form { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1rem; }
+    .newsletter-quick-input { padding: 0.75rem 1rem; border: 1px solid rgba(59,130,246,0.3); border-radius: 10px; background: rgba(255,255,255,0.05); color: #fff; font-size: 1rem; transition: all 0.3s ease; }
+    .newsletter-quick-input:focus { outline: none; border-color: #3b82f6; background: rgba(255,255,255,0.1); }
+    .newsletter-quick-input::placeholder { color: rgba(255,255,255,0.6); }
+    .newsletter-quick-button { padding: 0.75rem 1rem; background: linear-gradient(135deg, #3b82f6, #1e40af); border: none; border-radius: 10px; color: #fff; font-weight: 600; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; justify-content: center; margin-bottom: 0.5rem; }
+    .newsletter-quick-button:hover { background: linear-gradient(135deg, #2563eb, #1d4ed8); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(59,130,246,0.3); }
+    .newsletter-quick-benefits { display: grid; gap: 1rem; margin: 0.75rem 0 1rem 0; }
+    .benefit-item { display: flex; align-items: center; gap: 0.75rem; color: #6b7280; font-size: 0.9rem; }
+    .benefit-item i { color: #10b981; font-size: 1rem; }
+    .newsletter-quick-disclaimer { margin: 0.75rem 0 0 0; font-size: 0.85rem; color: #9ca3af; text-align: center; line-height: 1.6; }
+    
+    /* Removed conflicting spacing rules */
+    
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+    }
+    @media (min-width: 1024px) {
+        .article-page .article-grid { grid-template-columns: 2fr 1fr; gap: 2.5rem; }
+        .article-page .article-card { padding: 1.75rem; }
+        .article-page .article-title { font-size: 2.125rem; }
+    }
+
+    /* Light mode block for article when needed */
+    .article-page .light-article { background: #fff; border: 1px solid #e5e7eb; }
+    .article-page .light-article .article-title { color: #0f172a; }
+    .article-page .light-article .article-meta { color: #475569; }
+    .article-page .light-article .author-name { color: #0f172a; }
+    .article-page .light-article .author-role { color: #475569; }
+    .article-page .light-article .article-figure { border-color: #e5e7eb; }
+    /* Darken the "Trading Education" chip text inside the article meta */
+    .article-page .light-article .meta-chip { color: #374151; background: rgba(59,130,246,0.12); }
+    .article-page .light-article .article-figure figcaption { background: #f8fafc; color: #334155; border-top-color: #e5e7eb; }
+    .article-page .light-article .article-body { color: #111827; }
+    .article-page .light-article .article-body .lead { color: #0f172a; }
+    .article-page .light-article .article-body h3 { color: #0f172a; }
+    .article-page .light-article .article-body .article-quote { border-inline-start-color: #2563eb; background: #f8fafc; }
+    .article-page .light-article .article-body .article-quote cite { color: #334155; }
+    .article-page .light-article .tag-label { color: #0f172a; }
+    .article-page .light-article .tag { background: #f1f5f9; border-color: #e5e7eb; color: #0f172a; }
+
+    /* Dynamic Framework Cards */
+    .analysis-framework { margin: 2rem 0; }
+    .framework-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .framework-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem; text-align: center; transition: all 0.3s ease; opacity: 0; transform: translateY(20px); }
+    .framework-card.animate { opacity: 1; transform: translateY(0); }
+    .framework-card:hover { transform: translateY(-4px); border-color: rgba(59,130,246,0.3); }
+    .card-icon { font-size: 2rem; margin-bottom: 0.75rem; color: #3b82f6; transition: color 0.3s ease; }
+    .framework-card:hover .card-icon { color: #1d4ed8; }
+    .framework-card h4 { color: #fff; margin: 0 0 0.5rem 0; font-size: 1.1rem; }
+    .framework-card p { color: rgba(255,255,255,0.8); font-size: 0.9rem; line-height: 1.5; margin: 0; }
+
+    /* Analysis Steps */
+    .analysis-step { display: flex; gap: 1rem; margin: 1.5rem 0; padding: 1rem; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px solid rgba(255,255,255,0.06); }
+    .step-number { background: linear-gradient(135deg, #2563eb, #1e40af); color: #fff; width: 2.5rem; height: 2.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; flex-shrink: 0; }
+    .step-content { flex: 1; }
+    .step-content h4 { color: #fff; margin: 0 0 0.5rem 0; font-size: 1.1rem; }
+    .step-content p { color: rgba(255,255,255,0.9); margin: 0 0 0.75rem 0; line-height: 1.6; }
+    .step-tip { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); border-radius: 8px; padding: 0.75rem; color: rgba(255,255,255,0.9); font-size: 0.9rem; }
+
+    /* Fundamental Checklist */
+    .fundamental-checklist { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem; margin: 1.5rem 0; }
+    .fundamental-checklist h4 { color: #fff; margin: 0 0 1rem 0; }
+    .checklist-items { display: grid; gap: 0.75rem; }
+    .checklist-item { display: flex; align-items: center; gap: 0.75rem; }
+    .check-icon { color: #10b981; font-weight: 700; }
+    .checklist-item span:last-child { color: rgba(255,255,255,0.9); }
+
+    /* Sentiment Indicators */
+    .sentiment-indicators { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .indicator-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1rem; }
+    .indicator-card h4 { color: #fff; margin: 0 0 0.5rem 0; font-size: 1rem; }
+    .indicator-card p { color: rgba(255,255,255,0.8); font-size: 0.9rem; line-height: 1.5; margin: 0; }
+
+    /* Daily Routine */
+    .daily-routine { display: grid; gap: 1rem; margin: 1.5rem 0; }
+    .routine-step { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1rem; }
+    .routine-time { color: #fff; font-weight: 600; margin-bottom: 0.5rem; }
+    .routine-tasks { display: grid; gap: 0.25rem; }
+    .routine-tasks span { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
+
+    /* Light theme overrides for new elements */
+    .article-page .light-article .framework-card { background: #f8fafc; border-color: #e5e7eb; }
+    .article-page .light-article .framework-card h4 { color: #0f172a; }
+    .article-page .light-article .framework-card p { color: #475569; }
+    .article-page .light-article .card-icon { color: #2563eb; }
+    .article-page .light-article .framework-card:hover .card-icon { color: #1e40af; }
+    .article-page .light-article .analysis-step { background: #f8fafc; border-color: #e5e7eb; }
+    .article-page .light-article .step-content h4 { color: #0f172a; }
+    .article-page .light-article .step-content p { color: #374151; }
+    .article-page .light-article .step-tip { background: #eff6ff; border-color: #bfdbfe; color: #1e40af; }
+    .article-page .light-article .fundamental-checklist { background: #f8fafc; border-color: #e5e7eb; }
+    .article-page .light-article .fundamental-checklist h4 { color: #0f172a; }
+    .article-page .light-article .checklist-item span:last-child { color: #374151; }
+    .article-page .light-article .indicator-card { background: #f8fafc; border-color: #e5e7eb; }
+    .article-page .light-article .indicator-card h4 { color: #0f172a; }
+    .article-page .light-article .indicator-card p { color: #475569; }
+    .article-page .light-article .routine-step { background: #f8fafc; border-color: #e5e7eb; }
+    .article-page .light-article .routine-time { color: #0f172a; }
+    .article-page .light-article .routine-tasks span { color: #374151; }
+    .article-page .light-article .featured-image-placeholder { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+    .article-page .light-article .image-placeholder { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
+    .article-page .light-article .sidebar-image { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+
+    /* Education Articles Grid */
+    .education-articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+    .education-article-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 1.5rem; text-align: center; transition: all 0.3s ease; }
+    .education-article-card:hover { transform: translateY(-4px); border-color: rgba(59,130,246,0.3); }
+    .education-article-icon { font-size: 2.5rem; margin-bottom: 1rem; color: #3b82f6; }
+    .education-article-title { color: #fff; margin: 0 0 1rem 0; font-size: 1.2rem; line-height: 1.4; }
+    .education-article-description { color: rgba(255,255,255,0.8); margin: 0 0 1.5rem 0; line-height: 1.6; }
+    .education-article-cta { background: linear-gradient(135deg, #2563eb, #1e40af); color: #fff; border: none; padding: 0.75rem 1.5rem; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem; }
+    .education-article-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3); }
+
+    /* Newsletter Signup */
+    .newsletter-signup { background: linear-gradient(135deg, #1e40af, #3b82f6); border-radius: 16px; padding: 2rem; margin: 2rem 0; color: #fff; }
+    .newsletter-content { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem; }
+    .newsletter-icon { font-size: 3rem; color: rgba(255,255,255,0.9); }
+    .newsletter-text h3 { margin: 0 0 0.5rem 0; font-size: 1.5rem; }
+    .newsletter-text p { margin: 0; color: rgba(255,255,255,0.9); line-height: 1.6; }
+    .newsletter-form-main { display: flex; flex-direction: column; gap: 1rem; }
+    .newsletter-input-group { display: flex; gap: 0.75rem; }
+    .newsletter-email-input { flex: 1; padding: 0.75rem 1rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; background: rgba(255,255,255,0.1); color: #fff; font-size: 1rem; }
+    .newsletter-email-input::placeholder { color: rgba(255,255,255,0.7); }
+    .newsletter-submit-btn { padding: 0.75rem 1.5rem; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); border-radius: 10px; color: #fff; font-weight: 600; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; }
+    .newsletter-submit-btn:hover { background: rgba(255,255,255,0.3); }
+    .newsletter-disclaimer { margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.8); }
+
+    /* Comments Section */
+    .comments-section { margin: 2rem 0; }
+    .comments-list { display: grid; gap: 1.5rem; margin-bottom: 2rem; max-height: 400px; overflow-y: auto; padding-right: 0.5rem; }
+    .comments-list::-webkit-scrollbar { width: 6px; }
+    .comments-list::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); border-radius: 3px; }
+    .comments-list::-webkit-scrollbar-thumb { background: rgba(59,130,246,0.6); border-radius: 3px; }
+    .comments-list::-webkit-scrollbar-thumb:hover { background: rgba(59,130,246,0.8); }
+    .comment { display: flex; gap: 1rem; padding: 1.5rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; }
+    .comment-avatar { width: 60px; height: 60px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
+    .comment-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .avatar-icon { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 1.2rem; }
+    .comment-content { flex: 1; }
+    .comment-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+    .comment-author { color: #fff; margin: 0; font-size: 1.1rem; font-weight: 600; }
+    .comment-date { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+    .comment-rating { margin-bottom: 0.75rem; }
+    .comment-rating i { color: #fbbf24; margin-right: 0.25rem; }
+    .comment-text { color: rgba(255,255,255,0.9); line-height: 1.6; margin: 0 0 1rem 0; }
+    .comment-actions { display: flex; gap: 1rem; }
+    .comment-like, .comment-reply { background: none; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; }
+    .comment-like:hover, .comment-reply:hover { border-color: rgba(59,130,246,0.5); color: #3b82f6; }
+
+    /* Add Comment Form */
+    .add-comment { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2rem; }
+    .add-comment h4 { color: #fff; margin: 0 0 1.5rem 0; font-size: 1.3rem; }
+    .comment-form { display: grid; gap: 1.5rem; }
+    .comment-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .comment-form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+    .comment-form-label { color: #fff; font-weight: 600; }
+    .comment-form-input, .comment-form-textarea { padding: 0.75rem 1rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; background: rgba(255,255,255,0.05); color: #fff; font-size: 1rem; }
+    .comment-form-input::placeholder, .comment-form-textarea::placeholder { color: rgba(255,255,255,0.5); }
+    .comment-form-textarea { min-height: 120px; resize: vertical; }
+    .rating-input { display: flex; gap: 0.5rem; }
+    .rating-input input[type="radio"] { display: none; }
+    .rating-input label { font-size: 1.5rem; color: rgba(255,255,255,0.3); cursor: pointer; transition: color 0.3s ease; }
+    .rating-input input[type="radio"]:checked ~ label, .rating-input label:hover { color: #fbbf24; }
+    .comment-submit-btn { background: linear-gradient(135deg, #2563eb, #1e40af); color: #fff; border: none; padding: 0.75rem 1.5rem; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; justify-content: center; }
+    .comment-submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3); }
+
+    /* Light theme overrides for new sections */
+    .article-page .light-article .education-article-card { background: #f8fafc; border-color: #e5e7eb; }
+    .article-page .light-article .education-article-title { color: #0f172a; }
+    .article-page .light-article .education-article-description { color: #475569; }
+    .article-page .light-article .newsletter-signup { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+    .article-page .light-article .comment { background: #f8fafc; border-color: #e5e7eb; }
+    .article-page .light-article .comment-author { color: #0f172a; }
+    .article-page .light-article .comment-date { color: #64748b; }
+    .article-page .light-article .comment-text { color: #374151; }
+    .article-page .light-article .comment-like, .article-page .light-article .comment-reply { border-color: #e5e7eb; color: #64748b; }
+    .article-page .light-article .comment-like:hover, .article-page .light-article .comment-reply:hover { border-color: #3b82f6; color: #2563eb; }
+    .article-page .light-article .add-comment { background: #f8fafc; border-color: #e5e7eb; }
+    .article-page .light-article .add-comment h4 { color: #0f172a; }
+    .article-page .light-article .comment-form-label { color: #0f172a; }
+    .article-page .light-article .comment-form-input, .article-page .light-article .comment-form-textarea { background: #fff; border-color: #e5e7eb; color: #111827; }
+    .article-page .light-article .comment-form-input::placeholder, .article-page .light-article .comment-form-textarea::placeholder { color: #9ca3af; }
+    .article-page .light-article .rating-input label { color: #d1d5db; }
+    .article-page .light-article .rating-input input[type="radio"]:checked ~ label, .article-page .light-article .rating-input label:hover { color: #fbbf24; }
+    .article-page .light-article .sidebar-article-card { background: #f8fafc; border-color: #e5e7eb; }
+    .article-page .light-article .sidebar-article-title { color: #374151; }
+    .article-page .light-article .sidebar-article-description { color: #6b7280; }
+    .article-page .light-article .newsletter-quick-section { background: linear-gradient(135deg, #f8fafc, #f1f5f9); border-color: rgba(59,130,246,0.2); }
+    .article-page .light-article .newsletter-quick-title { color: #0f172a; }
+    .article-page .light-article .newsletter-quick-text { color: #475569; }
+    .article-page .light-article .newsletter-quick-input { background: #fff; border-color: #e5e7eb; color: #111827; }
+    .article-page .light-article .newsletter-quick-input::placeholder { color: #9ca3af; }
+    .article-page .light-article .benefit-item { color: #374151; }
+    .article-page .light-article .newsletter-quick-disclaimer { color: #6b7280; }
+
+    /* Newsletter Signup Section */
+    .newsletter-signup-section { background: linear-gradient(135deg, #1e40af, #3b82f6); padding: 4rem 0; margin: 2rem 0; }
+    .newsletter-signup-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .newsletter-signup-text h2 { color: #fff; margin: 0 0 1rem 0; font-size: 2rem; font-weight: 700; }
+    .newsletter-signup-text p { color: rgba(255,255,255,0.9); margin: 0; font-size: 1.1rem; }
+    .newsletter-signup-form { display: flex; flex-direction: column; gap: 1rem; }
+    .newsletter-input-group { display: flex; gap: 1rem; }
+    .newsletter-email-input { flex: 1; padding: 1rem 1.25rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; background: rgba(255,255,255,0.1); color: #fff; font-size: 1rem; }
+    .newsletter-email-input::placeholder { color: rgba(255,255,255,0.7); }
+    .newsletter-submit-btn { padding: 1rem 2rem; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; color: #fff; font-weight: 600; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; white-space: nowrap; }
+    .newsletter-submit-btn:hover { background: rgba(255,255,255,0.3); transform: translateY(-2px); }
+    .newsletter-disclaimer { margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.8); }
+
+    /* Featured Articles Slider */
+    .featured-articles-section { padding: 0 0 4rem 0; background: rgba(255,255,255,0.02); }
+    .featured-articles-header { text-align: center; margin-bottom: 3rem; }
+    .featured-articles-header h2 { color: #374151; margin: 0 0 1rem 0; font-size: 2rem; font-weight: 700; }
+    .featured-articles-header p { color: #6b7280; margin: 0; font-size: 1.1rem; }
+    .articles-carousel-container { position: relative; }
+    .articles-slider { display: flex; overflow: hidden; gap: 2rem; transition: transform 0.5s ease; }
+    .article-slide { min-width: 300px; flex: 0 0 300px; }
+    .article-slide { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; overflow: hidden; transition: all 0.3s ease; }
+    .article-slide:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
+    .article-slide-image { width: 100%; height: 200px; overflow: hidden; }
+    .article-slide-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+    .article-slide:hover .article-slide-image img { transform: scale(1.05); }
+    .article-slide-content { padding: 1.5rem; }
+    .article-slide-content h3 { color: #374151; margin: 0 0 1rem 0; font-size: 1.2rem; font-weight: 600; }
+    .article-slide-content p { color: #6b7280; margin: 0 0 1.5rem 0; line-height: 1.6; }
+    .article-slide-cta { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #2563eb, #1e40af); color: #fff; padding: 0.75rem 1.5rem; border-radius: 10px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
+    .article-slide-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3); }
+    
+    /* Carousel Controls */
+    .carousel-controls { position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 .5rem; pointer-events: none; z-index: 2; }
+    .carousel-btn { background: rgba(255,255,255,0.95); border: none; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.25s ease; pointer-events: auto; box-shadow: 0 4px 15px rgba(0,0,0,0.12); }
+    .carousel-btn:hover { background: #fff; transform: scale(1.06); }
+    .carousel-btn i { color: #374151; font-size: 1.2rem; }
+    .carousel-prev { margin-left: 0; }
+    .carousel-next { margin-right: 0; }
+    
+    /* Carousel Dots */
+    .carousel-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 2rem; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.3); cursor: pointer; transition: all 0.3s ease; }
+    .dot.active, .dot:hover { background: #3b82f6; }
+
+    /* Tablet refinements */
+    @media (max-width: 1024px) {
+        .carousel-btn { width: 44px; height: 44px; }
+    }
+
+    /* Mobile layout: controls to bottom center */
+    @media (max-width: 768px) {
+        .carousel-controls { top: auto; bottom: 12px; transform: none; justify-content: center; gap: 0.75rem; padding: 0; }
+        .carousel-btn { width: 40px; height: 40px; background: rgba(255,255,255,0.98); }
+        .carousel-btn i { font-size: 1rem; }
+    }
+
+    /* Mobile override: remove padding inside sidebar article cards in section 2 */
+    @media (max-width: 768px) {
+        .article-page .sidebar > .sidebar-section:nth-child(2) .sidebar-article-card { padding: 0 !important; }
+    }
+
+    @media (max-width: 768px) {
+        .newsletter-content { flex-direction: column; text-align: center; }
+        .newsletter-input-group { flex-direction: column; }
+        .comment { flex-direction: column; }
+        .comment-avatar { align-self: center; }
+        .education-articles-grid { grid-template-columns: 1fr; }
+        .newsletter-signup-content { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+        .newsletter-input-group { flex-direction: column; }
+        .articles-slider { grid-template-columns: 1fr; }
+        .comment-form-row { grid-template-columns: 1fr; }
+        .article-slide { min-width: 280px; flex: 0 0 280px; }
+        .carousel-btn { width: 40px; height: 40px; }
+        .carousel-prev { margin-left: -20px; }
+        .carousel-next { margin-right: -20px; }
+        /* Increase spacing between sidebar article cards */
+        .sidebar-articles > .sidebar-article-card { margin-bottom: 1rem !important; }
+        /* Improve mobile spacing in the #newsletter box */
+        .newsletter-quick-section { padding: 1.5rem !important; }
+        .newsletter-quick-title { margin-bottom: 0.75rem !important; }
+        .newsletter-quick-text { margin-bottom: 1rem !important; }
+        .newsletter-quick-form { gap: 0.75rem !important; }
+        .newsletter-quick-benefits { gap: 0.75rem !important; }
+        .newsletter-quick-button { margin-top: 0.25rem !important; }
+    }
+
+    /* Spacing refinements for newsletter box (mobile-first) */
+    .newsletter-quick-title { margin-bottom: 0.85rem !important; }
+    .newsletter-quick-text { margin-bottom: 1rem !important; line-height: 1.7 !important; }
+    .newsletter-quick-form { gap: 0.85rem !important; }
+    .newsletter-quick-input { padding: 0.85rem 1rem !important; min-height: 44px !important; }
+    .newsletter-quick-button { padding: 0.85rem 1rem !important; min-height: 44px !important; }
+    .newsletter-quick-benefits { margin-top: 0.75rem !important; gap: 0.75rem !important; }
+    .newsletter-quick-disclaimer { margin-top: 0.75rem !important; }
+
+    @media (max-width: 768px) {
+        /* Slightly increase card internal padding on compact screens */
+        .newsletter-quick-section { padding: 1.75rem !important; }
+        /* Add a touch more space above the benefits list */
+        .newsletter-quick-benefits { margin-top: 0.9rem !important; }
+    }
+</style>
+</html>
